@@ -1,4 +1,4 @@
-SHELL := /bin/bash
+SHELL := /bin/sh
 
 # Wallets
 # Kennedy: 0xF01813E4B85e178A83e29B8E7bF26BD830a25f32

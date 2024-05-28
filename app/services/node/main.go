@@ -98,7 +98,11 @@ func run(log *zap.SugaredLogger) error {
 
 	// Blockchain support
 
-	genesis.Load()
+	gen, err := genesis.Load()
+	if err != nil {
+		return fmt.Errorf("genesis load: %w", err)
+	}
+	log.Infow("startup", "gen", gen)
 
 	// =========================================================================
 	// Start Debug Service
